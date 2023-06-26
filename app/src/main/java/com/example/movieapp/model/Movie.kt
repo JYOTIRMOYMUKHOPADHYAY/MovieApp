@@ -151,3 +151,10 @@ fun getMovies(): List<Movie> {
 
         )
 }
+
+fun getMovie(data:String?) :Movie {
+    val temp: Movie = getMovies().filter { item ->
+        item.id == data
+    }.first()
+    return temp;
+}
